@@ -1,0 +1,80 @@
+:root {
+     --kleur: #6b8ef7;
+    --licht: #fdfbf5;
+    --wit: #ffffff;
+    --accent: #000000;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+           "header"
+           "main"
+           "footer";
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    grid-area: header;
+    background-color: var(--kleur);
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 20px;
+    padding: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: var(--wit);
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: var(--accent);
+}
+main{
+    grid-area: main;
+   background-color: var(--licht);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+   padding: 50px;
+}
+main img{
+    width: 300px;
+    animation: rotate 15s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+textarea{
+    padding: 50px;
+    min-height: 100px;
+}
+button{
+    padding: 12px;
+    text-transform: uppercase;
+    background-color: var(--accent); 
+    color: var(--wit);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    align-self: flex-start;
+
+}
+button:hover{
+    background-color: var(--kleur);
+    border-radius: 0;
+}

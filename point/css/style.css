@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+}
+.tegel{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 8px;
+    box-shadow: 4px 2px 5px 3px gray;
+    transition: transform 0.3s ease;
+}
+.tegel:nth-child(1):hover{
+    transform: translateX(-50px)
+}
+.tegel:nth-child(2):hover{
+    transform: translateY(-50px)
+}
+.tegel:nth-child(3):hover{
+    transform: translateX(50px)
+}
